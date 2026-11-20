@@ -1,0 +1,368 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff4f8;
+    color: #61263e;
+    overflow-x: hidden;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+#welcome {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #400c29, #a62c61, #f18caf);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transition: opacity 1s, visibility 1s;
+}
+
+#welcome.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.welcome-content {
+    padding: 25px;
+}
+
+.big-heart {
+    font-size: 75px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.welcome-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+    color: #ffd9e8;
+    margin: 15px 0;
+}
+
+.welcome-content p {
+    letter-spacing: 2px;
+    margin: 12px 0;
+}
+
+button, .main-btn {
+    border: none;
+    background: #e94f89;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 14px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+
+button:hover, .main-btn:hover {
+    background: #ad285c;
+    transform: translateY(-4px);
+}
+
+.hero {
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    background:
+    linear-gradient(120deg, rgba(49,5,30,.85), rgba(135,24,75,.55)),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1600') center/cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+nav h2 {
+    color: #ffd4e4;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 100px 25px;
+    margin: auto;
+    text-align: center;
+}
+
+.small-heading, .eyebrow {
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #e45b91;
+    font-weight: bold;
+}
+
+.hero .small-heading {
+    color: #ffd5e5;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 90px);
+    margin: 20px 0;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    font-family: 'Great Vibes', cursive;
+    color: #ffb5d1;
+}
+
+.hero h2 {
+    color: #ffd5e5;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    line-height: 2;
+}
+
+.floating-rose {
+    position: absolute;
+    right: 8%;
+    bottom: 8%;
+    font-size: 60px;
+}
+
+section {
+    padding: 90px 7%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 15px 0 35px;
+    color: #bb356e;
+}
+
+.success {
+    background: #ffe4ee;
+}
+
+.success-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 45px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px #a92b5b18;
+}
+
+.cap {
+    font-size: 75px;
+}
+
+.success-card h3 {
+    color: #ce3975;
+    margin: 20px 0;
+}
+
+.success-card p {
+    line-height: 2;
+}
+
+.gallery {
+    background: white;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.photo {
+    background: #fff1f6;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #a92b5b18;
+    transition: .4s;
+}
+
+.photo:hover {
+    transform: translateY(-8px);
+}
+
+.photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.photo p {
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+.quotes {
+    background: #fff0f5;
+}
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.quote {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    line-height: 1.9;
+    box-shadow: 0 8px 25px #a92b5b12;
+    transition: .3s;
+}
+
+.quote:hover {
+    transform: scale(1.03);
+}
+
+.letter {
+    background: linear-gradient(135deg, #ffe2ed, #fff7fa);
+}
+
+.letter-paper {
+    max-width: 750px;
+    background: #fff;
+    margin: auto;
+    padding: 45px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px #a92b5b20;
+    text-align: left;
+    line-height: 2.2;
+}
+
+.letter-paper p {
+    margin: 15px 0;
+}
+
+.letter-paper h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #d73e7d;
+}
+
+.music {
+    background: white;
+}
+
+.music p {
+    line-height: 2;
+}
+
+.surprise {
+    background: linear-gradient(135deg, #3f0b28, #941d54);
+    color: white;
+}
+
+.surprise h2 {
+    color: #ffbfd7;
+}
+
+.surprise .eyebrow {
+    color: #ffb6d1;
+}
+
+#surpriseMessage {
+    display: none;
+    max-width: 650px;
+    margin: 35px auto 0;
+    padding: 35px;
+    border: 1px solid #f6a6c4;
+    border-radius: 25px;
+    background: #ffffff12;
+    line-height: 2.2;
+    animation: appear 1s;
+}
+
+#surpriseMessage h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+}
+
+footer {
+    background: #260a19;
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+    line-height: 2.2;
+}
+
+footer h2, footer h3 {
+    color: #ffb5d0;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    z-index: 999;
+    pointer-events: none;
+    animation: float 6s linear forwards;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.2); }
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: translateY(25px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@media(max-width:600px) {
+    nav {
+        padding: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero-content {
+        padding-top: 110px;
+    }
+
+    .success-card, .letter-paper {
+        padding: 25px 18px;
+    }
+
+    .photo img {
+        height: 280px;
+    }
+}
